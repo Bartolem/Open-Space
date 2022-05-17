@@ -1,0 +1,147 @@
+body {
+    background-color: #130029;
+    margin: 0;
+}
+.space {
+    background-image: url("https://stepik.org/media/attachments/lesson/452681/space.png");
+    width: 80vw;
+    height: 100vh;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planet-area{
+    width: 50%;
+    height: 50%;
+}
+.planet {
+    position: absolute;
+    transform: scale(50%);
+    left: -226px;
+    bottom: -226px;
+    border-radius: 0 0 0 20px;
+}
+.rocket {
+    position: absolute;
+    transform: scale(30%) rotate(25deg);
+}
+.control-panel {
+    background-color: dimgrey;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px,
+    rgb(255,255,100) 35px,
+    rgb(255,255,100) 70px);
+    border-radius: 15px;
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.control-panel__inner {
+    background-color: #445;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.inputPassword, .submitPassword, .launch {
+    background-color: yellow;
+    color: dimgrey;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid dimgrey;
+    padding: 3px;
+    font-size: 1.2rem;
+    font-family: Impact;
+}
+.inputPassword {
+    min-width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.check-buttons {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    //align-items: center;
+    justify-content: space-evenly;
+}
+.check-buttons #check-button1 {
+    width: 30px;
+}
+
+.check-buttons #check-button2 {
+    width: 30px;
+}
+
+.check-buttons #check-button3 {
+    width: 30px;
+}
+
+.check-buttons #check-button4 {
+    width: 30px;
+}
+
+.check-buttons #check-button5 {
+    width: 30px;
+}
+
+.check-buttons #check-button6 {
+    width: 30px;
+}
+.levers {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.levers #lever1 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 30px 30px;
+    transform: rotate(-90deg);
+}
+.levers #lever2 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 30px 30px;
+    transform: rotate(-90deg);
+}
+.levers #lever3 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 30px 30px;
+    transform: rotate(-90deg);
+}
+.levers #lever4 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 30px 30px;
+    transform: rotate(-90deg);
+}
+.levers #lever5 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 30px 30px;
+    transform: rotate(-90deg);
+}
+.launch {
+    border-radius: 25%;
+    background-color: tomato;
+    color: whitesmoke;
+}
