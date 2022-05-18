@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Open Space</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" async></script>
 </head>
 <body>
     <div class="space">
@@ -13,8 +14,8 @@
         </div>
         <div class="control-panel">
             <div class="control-panel__inner">
-                <input class="inputPassword" type="password" name="password" placeholder="Enter password to unlock" >
-                <input class="submitPassword" type="button" name="button" value="Ok">
+                <input id="password" class="inputPassword" type="password" name="password" placeholder="Enter password to unlock">
+                <input id="submit" class="submitPassword" type="button" name="button" value="Ok">
                 <div class="check-buttons">
                     <input type="checkbox" class="check-button" name="check-button">
                     <input type="checkbox" class="check-button" name="check-button">
@@ -24,15 +25,15 @@
                     <input type="checkbox" class="check-button" name="check-button">
                 </div>
                 <div class="levers">
-                    <input type="range" name="levers" id="lever1" min="0" max="10">
-                    <input type="range" name="levers" id="lever2" min="0" max="10">
-                    <input type="range" name="levers" id="lever3" min="0" max="10">
-                    <input type="range" name="levers" id="lever4" min="0" max="10">
-                    <input type="range" name="levers" id="lever5" min="0" max="10">
+                    <input type="range" class="lever" id="lever1" min="0" max="10">
+                    <input type="range" class="lever" id="lever2" min="0" max="10">
+                    <input type="range" class="lever" id="lever3" min="0" max="10">
+                    <input type="range" class="lever" id="lever4" min="0" max="10">
+                    <input type="range" class="lever" id="lever5" min="0" max="10">
                 </div>
-                    <input class="launch" type="button" value="Launch">
+                    <input id="launch" class="launch" type="button" value="Launch">
+                </div>
             </div>
-        </div>
-    </div>
-</body>
+        </div>>
+    </body>
 </html>
