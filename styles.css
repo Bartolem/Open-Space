@@ -60,12 +60,16 @@ body {
     border: 4px solid dimgrey;
     padding: 3px;
     font-size: 1.2rem;
-    font-family: Impact;
+    font-family: cursive;
 }
 .inputPassword {
     min-width: 60%;
     margin-left: 5%;
     margin-right: 5%;
+}
+.submitPassword {
+    color: gray;
+    background-color: #66cc66;
 }
 .check-buttons {
     width: 100%;
@@ -144,4 +148,8 @@ body {
     border-radius: 25%;
     background-color: tomato;
     color: whitesmoke;
+}
+.launch:disabled, .submitPassword:disabled, .inputPassword:disabled {
+    background-color: gray;
+    color: lightgray;
 }

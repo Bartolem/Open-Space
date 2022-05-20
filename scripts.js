@@ -3,6 +3,7 @@ let submit = document.querySelector(".submitPassword");
 let checkButton = document.querySelectorAll(".check-button");
 let lever = document.querySelectorAll(".lever");
 let launch = document.getElementById("launch");
+let rocket = document.getElementById("rocket");
 
 function disable() {
     checkButton.forEach(button => {
@@ -36,30 +37,28 @@ function disablePassword() {
 }
 
 function unlockLaunch() {
-    let checkedCheckButton;
-    let checkedLever;
+    let element1 = 0;
+    let element2 = 0;
 
     for (let i = 0; i < checkButton.length; i++) {
-        let element = checkButton[i];
 
-        if (!element.checked) {
-            checkedCheckButton = false;
+        if (checkButton[i].checked) {
+            element1++;
         }
     }
 
     for (let i = 0; i < lever.length; i++) {
-        let element = lever[i];
 
-        if (!element.value < 10) {
-            checkedLever = false;
+        if (lever[i].value === "100") {
+            element2++;
         }
     }
 
-    if (checkedCheckButton && checkedLever) {
-        launch.removeAttribute("disable", "false");
+    if (element1 === checkButton.length && element2 === lever.length) {
+        launch.disabled = false;
     }
     else {
-        launch.setAttribute("disable", "true");
+        launch.disabled = true;
     }
 }
 
@@ -77,10 +76,31 @@ function checkPassword() {
         console.log("Wrong password!");
     }
 }
+function fly() {
+    launch.addEventListener('click',function rocketMove() {
+        rocket.animate([
+
+            { // current position of rocket
+                top: '24%',
+                left: '9%'
+            },
+
+            { //  final position of rocket
+                top: '-75%',
+                left: '60%'
+            }
+        ], {
+            // timing options
+            duration: 6000,
+            iterations: 1,
+        })
+    })
+}
 
 function start() {
     disable();
     submit.addEventListener("click",() => checkPassword());
+    launch.addEventListener("click", () => fly());
 }
 
 start();
