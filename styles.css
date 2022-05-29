@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 .space {
-    background-image: url("https://stepik.org/media/attachments/lesson/452681/space.png");
+    background-image: url("images/space.png");
     width: 80vw;
     height: 100vh;
     border-radius: 10px;
@@ -76,7 +76,7 @@ body {
     height: 30%;
     display: flex;
     flex-direction: row;
-    //align-items: center;
+    align-items: center;
     justify-content: space-evenly;
 }
 .check-buttons #check-button1 {
