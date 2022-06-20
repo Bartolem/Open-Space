@@ -1,5 +1,5 @@
 let password = document.getElementById("password").value;
-let submit = document.querySelector(".submitPassword");
+let submit = document.querySelector(".submit-password");
 let checkButton = document.querySelectorAll(".check-button");
 let lever = document.querySelectorAll(".lever");
 let launch = document.getElementById("launch");
@@ -76,8 +76,9 @@ function checkPassword() {
         console.log("Wrong password!");
     }
 }
+
 function fly() {
-    launch.addEventListener('click',function rocketMove() {
+    launch.addEventListener('click', function rocketMove() {
         rocket.animate([
 
             { // current position of rocket
@@ -86,8 +87,8 @@ function fly() {
             },
 
             { //  final position of rocket
-                top: '-75%',
-                left: '60%'
+                top: '-15%',
+                left: '80%'
             }
         ], {
             // timing options
@@ -99,7 +100,7 @@ function fly() {
 
 function start() {
     disable();
-    submit.addEventListener("click",() => checkPassword());
+    submit.addEventListener("click", () => checkPassword());
     launch.addEventListener("click", () => fly());
 }
 
