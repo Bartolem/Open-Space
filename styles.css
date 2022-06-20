@@ -11,7 +11,7 @@ img {
     width: 100%;
     height: 100%;
     background-image: url("images/space.jpg");
-    background-size: 20%;
+    background-size: 40%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@ img {
 .planet-area {
     margin: 0;
     width: 40%;
+    height: 50%;
 }
 
 .planet {
@@ -30,9 +31,10 @@ img {
 
 .rocket {
     position: relative;
+    left: -4em;
     top: 5em;
     width: 20%;
-    transform: rotate(65deg);
+    transform: rotate(50deg);
 }
 
 .control-panel {

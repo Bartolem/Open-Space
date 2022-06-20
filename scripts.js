@@ -82,13 +82,13 @@ function fly() {
         rocket.animate([
 
             { // current position of rocket
-                top: '24%',
-                left: '9%'
+                top: '20%',
+                left: '-10%',
             },
 
             { //  final position of rocket
-                top: '-15%',
-                left: '80%'
+                top: '-50%',
+                left: '80%',
             }
         ], {
             // timing options
