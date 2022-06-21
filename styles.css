@@ -1,5 +1,4 @@
 body {
-    height: 100vh;
     margin: 0 auto;
 }
 
@@ -9,17 +8,15 @@ img {
 
 .space {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url("images/space.jpg");
     background-size: 40%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 .planet-area {
-    margin: 0;
     width: 40%;
     height: 50%;
 }
@@ -67,8 +64,10 @@ img {
     color: dimgrey;
     border: 4px solid dimgrey;
     padding: 3px;
-    font-size: 1.2rem;
+    margin: 0.4em;
+    font-size: 1rem;
     font-family: cursive;
+    text-transform: uppercase;
 }
 
 .input-data {
@@ -79,15 +78,15 @@ img {
 }
 
 .input-password {
-    min-width: 60%;
+    width: 80%;
     text-align: center;
 }
 
 .submit-password {
+    width: 12%;
     color: gray;
     background-color: #66cc66;
     padding: 0.4em;
-    border-radius: 50%;
 }
 
 .check-buttons {
@@ -102,8 +101,7 @@ img {
 
 .levers {
     width: 100%;
-    height: 20%;
-    padding: 1em;
+    height: 35%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +110,7 @@ img {
 .levers #lever1, .levers #lever2,
 .levers #lever3, .levers #lever4,
 .levers #lever5 {
-    width: 15%;
+    width: 35%;
     transform: rotate(-90deg);
 }
 
@@ -124,8 +122,9 @@ img {
 }
 
 .launch {
+    width: 100%;
+    height: 100%;
     padding: 0.5em;
-    border-radius: 50%;
     background-color: tomato;
     color: whitesmoke;
 }
@@ -133,4 +132,103 @@ img {
 .launch:disabled, .submit-password:disabled, .input-password:disabled {
     background-color: gray;
     color: lightgray;
+}
+
+@media (max-width:1000px) {  
+    .control-panel {
+        height: 30%;
+    }
+    
+    .input-data {
+        width: 100%;
+    }
+
+    .input-password, .submit-password, .launch {
+        font-size: 0.9rem;
+        margin: -0.5em;
+    }
+
+    .levers, .check-buttons {
+        margin: -0.5em;
+    }
+
+    .input-password {
+        min-width: 70%;
+    }
+
+    .levers #lever1, .levers #lever2,
+    .levers #lever3, .levers #lever4,
+    .levers #lever5 {
+    width: 45%;
+    }
+
+    .launch {
+        margin: 0;
+    }
+}
+
+@media (max-width:850px) {
+    .space {
+        flex-direction: column;
+    }
+    
+    .planet-area {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rocket {
+        width: 15%;
+    }
+
+    .control-panel {
+        width: 55%;
+        height: 35%;
+    }
+    
+    .input-password, .submit-password, .launch {
+        margin: -0.4em;
+        font-size: 0.7rem;
+    }
+
+    .levers #lever1, .levers #lever2,
+    .levers #lever3, .levers #lever4,
+    .levers #lever5 {
+        width: 30%;
+    }
+
+    .launch {
+        height: 180%;
+        width: 200%;
+    }
+
+    .levers {
+        padding: 1em;
+    }
+}
+
+@media (max-width:500px) {
+    * {
+        font-size: 1.2rem;
+    }
+    
+    .planet-area {
+        width: 50%;
+    }
+    
+    .planet {
+        width: 50%;
+    }
+
+    .rocket {
+        width: 40%;
+    }
+
+    .control-panel {
+        align-self: flex-end;
+        width: 100%;
+        height: 40%;
+    }
 }
